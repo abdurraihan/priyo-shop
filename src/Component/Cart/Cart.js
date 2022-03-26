@@ -9,9 +9,9 @@ const Cart = (props) => {
     const chose = () =>
     {
       
-    const choseN = Math.floor( Math.random() * cart.length ) ;
+    const choseRandom = Math.floor( Math.random() * cart.length ) ;
    
-    setCartData( cart[choseN])
+    setCartData( cart[choseRandom])
 
     }
    
@@ -20,7 +20,7 @@ const Cart = (props) => {
         name =[...name ,product.name]
     }
 
-    
+  
         
     
 
@@ -29,7 +29,7 @@ const Cart = (props) => {
             <h1 >selected product:</h1>
            
             {
-                cart.map(ct => <h3 > {ct.name} </h3>)
+                cart.map(ct => <h3> {ct.name} </h3>)
           
             }
 

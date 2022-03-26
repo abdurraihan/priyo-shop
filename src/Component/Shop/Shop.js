@@ -43,7 +43,7 @@ useEffect(
 
         <div className='cart-section'>
          
-         <Cart cart={cart}  choseAgain={choseAgain} key={cart.id}> </Cart>
+         <Cart cart={cart}   choseAgain={choseAgain} > </Cart>
 
         </div>
 
