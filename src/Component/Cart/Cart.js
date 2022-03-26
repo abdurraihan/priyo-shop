@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-    const {cart} = props;
+    const {cart , choseAgain} = props;
 
     const [cartData , setCartData] = useState({})
 
@@ -40,7 +40,9 @@ const Cart = (props) => {
 
           <button onClick={chose}  className='btn-card'> chose 1 for me</button>
 
-          <button> </button>
+          <button onClick={choseAgain} className='chose-again'>
+              chose again
+          </button>
 
              
         </div>

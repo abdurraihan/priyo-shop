@@ -14,14 +14,18 @@ useEffect(
         .then(res=> res.json())
         .then(data =>  setProduct(data));
     }
-     ,[])
+     ,[]);
 
     const handleAddToCart = (product) =>{
 
         const newCart = [...cart, product]
 
         setCart(newCart);
-    }
+    };
+
+    const choseAgain = () =>{
+       setCart([])
+    };
 
     return (
         <div className='shop-container'>
@@ -39,7 +43,7 @@ useEffect(
 
         <div className='cart-section'>
          
-         <Cart cart={cart} > </Cart>
+         <Cart cart={cart}  choseAgain={choseAgain} key={cart.id}> </Cart>
 
         </div>
 
