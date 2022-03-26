@@ -1,21 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Cart.css'
 
 const Cart = (props) => {
     const {cart} = props;
+
+    const [cartData , setCartData] = useState({})
+
+    const chose = () =>
+    {
+      
+    const choseN = Math.floor( Math.random() * cart.length ) ;
+   
+    setCartData( cart[choseN])
+
+    }
    
     let name = [];
     for(const product of cart){
         name =[...name ,product.name]
     }
+
+    
+        
+    
+
     return (
         <div>
             <h1 >selected product:</h1>
-            <p> hello </p>
+           
             {
-                name.map(name => <h3 > {name} </h3>)
+                cart.map(ct => <h3 > {ct.name} </h3>)
           
             }
 
+            
+             <h2> { cartData.name}</h2>  
+            
+               
+
+          <button onClick={chose}  className='btn-card'> chose 1 for me</button>
+
+          <button> </button>
 
              
         </div>
