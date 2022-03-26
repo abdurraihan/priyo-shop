@@ -1,5 +1,6 @@
 
 import './App.css';
+import Ques from './Component/Ques/Ques';
 import Shop from './Component/Shop/Shop';
 
 
@@ -14,6 +15,8 @@ function App() {
       
     </Shop>
     
+    <Ques> </Ques>
+
 
 
  
